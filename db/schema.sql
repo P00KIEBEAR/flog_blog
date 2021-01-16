@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS flog_blog;
+
+CREATE DATABASE flog_blog;

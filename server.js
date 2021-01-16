@@ -1,7 +1,7 @@
 // Dependencies
 // =============================================================
 const express = require('express');
-const exphbs = require('express-handlebars');
+const handlebars = require('express-handlebars');
 
 // Sets up the Express App
 // =============================================================
@@ -12,8 +12,8 @@ const PORT = process.env.PORT || 3001;
 //
 // YOUR CODE HERE
 //
-app.engine("handlebars", handlebars({ DefaultLayout: "main" }));
-app.set("view engine", handlebars);
+app.engine("hbs", handlebars({ DefaultLayout: "main" }));
+app.set("view engine", "hbs");
 // Data
 // =============================================================
 
@@ -21,7 +21,7 @@ app.set("view engine", handlebars);
 // =============================================================
 
 app.get('/', (req, res) => {
-  res.render('index')
+  res.render('main')
 
 
 });
